@@ -19,7 +19,31 @@ function getCellElements (currentRowElement) {
     return currentRowElement.querySelectorAll(".cell")
 }
 
+replaceAllButton.addEventListener ("click", function(){
 
+       let inputfind=findInput.value
+       let inputReplace =replaceInput.value
+
+    for ( let rowIndex=0; rowIndex < rowElements.length; rowIndex +=1){
+       const indexRow = rowElements[rowIndex];
+       console.log('section' + rowIndex);
+       var indexCell = getCellElements;
+       
+       for (let cellIndex = 0; cellIndex < indexRow.length; cellIndex += 1){ 
+         indexCell = indexRow[cellIndex]
+         console.log ('cell' + indexCell)
+       }
+
+console.log (indexCell.includes(inputfind))
+    const newName = indexCell.replaceInput (inputfind,inputReplace)
+    indexCell.innerHTML=newName
+
+
+
+     
+
+       }})
+    
 // YOUR CODE GOES HERE
 
 
